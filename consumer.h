@@ -2,9 +2,9 @@
 #define CONSUMER_H
 #include <QThread>
 
-
-class Consumer
+class Consumer : QThread
 {
+    Q_OBJECT
 public:
     Consumer();
     ~Consumer();
