@@ -9,3 +9,8 @@ Producer::~Producer()
 {
 
 }
+
+void Producer::fill(int times)
+{
+
+}

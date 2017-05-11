@@ -11,6 +11,8 @@ public:
 
     QList<int>* myQList_ptr = NULL;
 
+    void fill(int times);
+
 
 };
 
