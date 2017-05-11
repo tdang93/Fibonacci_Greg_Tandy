@@ -1,6 +1,11 @@
-#include "producer.h"
+#include "Producer.h"
 
-producer::producer()
+Producer::Producer()
+{
+
+}
+
+Producer::~Producer()
 {
 
 }

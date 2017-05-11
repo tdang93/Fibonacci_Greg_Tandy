@@ -3,10 +3,11 @@
 #include <QThread>
 
 
-class consumer
+class Consumer
 {
 public:
-    consumer();
+    Consumer();
+    ~Consumer();
 };
 
 #endif // CONSUMER_H

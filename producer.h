@@ -3,10 +3,11 @@
 #include <QThread>
 
 
-class producer
+class Producer
 {
 public:
-    producer();
+    Producer();
+    ~Producer();
 };
 
 #endif // PRODUCER_H

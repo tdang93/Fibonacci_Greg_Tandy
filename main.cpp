@@ -1,5 +1,5 @@
-#include "consumer.h"
-#include "producer.h"
+#include "Consumer.h"
+#include "Producer.h"
 
 int main(int argc, char **argv)
 {

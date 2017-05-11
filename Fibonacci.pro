@@ -7,9 +7,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 SOURCES += \
     main.cpp \
-    producer.cpp \
-    consumer.cpp
+    Consumer.cpp \
+    Producer.cpp
 
 HEADERS += \
-    producer.h \
-    consumer.h
+    Consumer.h \
+    Producer.h

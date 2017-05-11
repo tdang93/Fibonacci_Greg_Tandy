@@ -1,6 +1,11 @@
-#include "consumer.h"
+#include "Consumer.h"
 
-consumer::consumer()
+Consumer::Consumer()
+{
+
+}
+
+Consumer::~Consumer()
 {
 
 }
