@@ -8,7 +8,10 @@ class Producer : QThread
 public:
     Producer();
     ~Producer();
-    QList* QList_ptr = NULL;
+
+    QList<int>* myQList_ptr = NULL;
+
+
 };
 
 #endif // PRODUCER_H

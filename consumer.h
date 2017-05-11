@@ -8,6 +8,7 @@ class Consumer : QThread
 public:
     Consumer();
     ~Consumer();
+    QList<int>* myQList_ptr = NULL;
 };
 
 #endif // CONSUMER_H
