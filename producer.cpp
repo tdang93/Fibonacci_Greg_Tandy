@@ -30,7 +30,10 @@ void Producer::fill(int times)
         }
 
         else
-        //calculation
-        //cout << s
+        {
+            //calculation
+            //cout << s
+        }
+
     }
 }
