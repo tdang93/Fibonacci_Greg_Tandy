@@ -1,5 +1,7 @@
 #include "Consumer.h"
 #include "Producer.h"
+#include "spinboxwindow.h"
+#include "mainwindow.h"
 
 #include <QTextEdit>
 #include <QHBoxLayout>
@@ -10,14 +12,17 @@ int main(int argc, char **argv)
 //    QList<int> myQList;
     QApplication app(argc, argv);
 
-    Producer producer;
+//    Producer producer;
+    SpinBoxWindow spinboxWindow;
+    MainWindow mainWindow;
 //    producer.myQList_ptr = &myQList;
 
 //    producer.fill();
 
 //    Consumer consumer;
 //    consumer.myQList_ptr = &myQList;
-    producer.fill(1);
+    spinboxWindow.show();
+    mainWindow.show();
 
     return app.exec();
 }
