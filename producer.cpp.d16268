@@ -17,7 +17,7 @@ void Producer::fill(int times)
     int second = 1;
     QTextStream cin(stdin);
     cin >> times;
-    QTextStream cout(stdout);
+    QTextSream cout(stdout);
 
 
     //number of outputs
@@ -26,10 +26,7 @@ void Producer::fill(int times)
         if (times == 1)
         {
             *myQList_ptr << first;
-            while (!*myQList_ptr->isEmpty())
-            {
-                cout << *myQList_ptr->takeFirst();
-            }
+            cout << *myQList_ptr;
         }
         else if (times == 2)
         {

@@ -1,5 +1,7 @@
 #include "Producer.h"
 #include <QTextStream>
+#include <iostream>
+#include <cstdlib>
 
 Producer::Producer()
 {
@@ -26,10 +28,7 @@ void Producer::fill(int times)
         if (times == 1)
         {
             *myQList_ptr << first;
-            while (!*myQList_ptr->isEmpty())
-            {
-                cout << *myQList_ptr->takeFirst();
-            }
+            cout << *myQList_ptr;
         }
         else if (times == 2)
         {

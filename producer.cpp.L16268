@@ -28,7 +28,7 @@ void Producer::fill(int times)
             *myQList_ptr << first;
             while (!*myQList_ptr->isEmpty())
             {
-                cout << *myQList_ptr->takeFirst();
+                cout << delete *myQList_ptr->takeFirst();
             }
         }
         else if (times == 2)

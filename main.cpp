@@ -3,18 +3,21 @@
 
 #include <QTextEdit>
 #include <QHBoxLayout>
+#include <QApplication>
 
 int main(int argc, char **argv)
 {
-    QList<int> myQList;
+//    QList<int> myQList;
+    QApplication app(argc, argv);
 
     Producer producer;
-    producer.myQList_ptr = &myQList;
+//    producer.myQList_ptr = &myQList;
 
-    producer.fill();
+//    producer.fill();
 
-    Consumer consumer;
-    consumer.myQList_ptr = &myQList;
+//    Consumer consumer;
+//    consumer.myQList_ptr = &myQList;
+    producer.fill(1);
 
     return app.exec();
 }
