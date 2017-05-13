@@ -14,7 +14,6 @@ int main(int argc, char **argv)
 
 //    Producer producer;
     SpinBoxWindow spinboxWindow;
-    MainWindow mainWindow;
 //    producer.myQList_ptr = &myQList;
 
 //    producer.fill();
@@ -22,7 +21,6 @@ int main(int argc, char **argv)
 //    Consumer consumer;
 //    consumer.myQList_ptr = &myQList;
     spinboxWindow.show();
-    mainWindow.show();
 
     return app.exec();
 }

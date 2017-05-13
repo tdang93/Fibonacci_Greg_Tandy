@@ -1,5 +1,7 @@
 #include "spinboxwindow.h"
 #include "ui_spinboxwindow.h"
+#include "mainwindow.h"
+#include "producer.h"
 
 SpinBoxWindow::SpinBoxWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -11,4 +13,21 @@ SpinBoxWindow::SpinBoxWindow(QWidget *parent) :
 SpinBoxWindow::~SpinBoxWindow()
 {
     delete ui;
+}
+
+void SpinBoxWindow::on_buttonBox_accepted()
+{
+    MainWindow mainWindow;
+    mainWindow.show();
+    close();
+}
+
+void SpinBoxWindow::on_buttonBox_rejected()
+{
+    close();
+}
+
+void SpinBoxWindow::on_spinBox_valueChanged(int times)
+{
+    Producer.fill(times);
 }

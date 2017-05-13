@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>287</width>
+    <width>374</width>
     <height>98</height>
    </rect>
   </property>
@@ -46,17 +46,17 @@
      <number>1</number>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QDialogButtonBox" name="buttonBox">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>200</x>
       <y>20</y>
-      <width>61</width>
+      <width>156</width>
       <height>23</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Select</string>
+    <property name="standardButtons">
+     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
     </property>
    </widget>
   </widget>
@@ -65,7 +65,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>287</width>
+     <width>374</width>
      <height>21</height>
     </rect>
    </property>

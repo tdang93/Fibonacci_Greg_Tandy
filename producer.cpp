@@ -1,4 +1,5 @@
 #include "Producer.h"
+#include "spinboxwindow.h"
 #include <QTextStream>
 
 Producer::Producer()

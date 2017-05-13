@@ -15,6 +15,13 @@ public:
     explicit SpinBoxWindow(QWidget *parent = 0);
     ~SpinBoxWindow();
 
+private slots:
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
+
+    void on_spinBox_valueChanged(int times);
+
 private:
     Ui::SpinBoxWindow *ui;
 };
