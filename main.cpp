@@ -7,17 +7,16 @@
 
 int main(int argc, char **argv)
 {
-//    QList<int> myQList;
     QApplication app(argc, argv);
+    QList<int> myQList;
 
     Producer producer;
-//    producer.myQList_ptr = &myQList;
+    producer.myQList_ptr = &myQList;
+    producer.fill(10);
 
-//    producer.fill();
-
-//    Consumer consumer;
-//    consumer.myQList_ptr = &myQList;
-    producer.fill(1);
+    Consumer consumer;
+    consumer.myQList_ptr = &myQList;
+    consumer.pour();
 
     return app.exec();
 }

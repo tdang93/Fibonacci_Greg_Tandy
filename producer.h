@@ -12,8 +12,6 @@ public:
     QList<int>* myQList_ptr = NULL;
 
     void fill(int times);
-
-
 };
 
 #endif // PRODUCER_H
