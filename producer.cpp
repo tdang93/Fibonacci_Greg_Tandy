@@ -1,4 +1,5 @@
 #include "Producer.h"
+#include <QTextStream>
 
 Producer::Producer()
 {
@@ -12,25 +13,30 @@ Producer::~Producer()
 
 void Producer::fill(int times)
 {
-    int f = 0;
-    int s = 1;
+    int first = 0;
+    int second = 1;
+    QTextStream cin(stdin);
+    cin >> times;
 
 
     //number of outputs
     for (int i = 0; i < times; ++i)
     {
-        if (i = 0)
+        if (times == 1)
         {
-            //cout 0
+            myQList_ptr << first;
         }
-        else if (i = 1)
+        else if (times == 2)
         {
-            //cout << " 1"
-            break;
+            myQList_ptr << first << second;
         }
-
         else
-        //calculation
-        //cout << s
+        {
+            myQList_ptr << first << second;
+            int outcome = first + second;
+            myQList_ptr << outcome;
+            first = second;
+            second = outcome;
+        }
     }
 }
