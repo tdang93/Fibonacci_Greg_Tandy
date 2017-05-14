@@ -12,15 +12,18 @@ int main(int argc, char **argv)
 //    QList<int> myQList;
     QApplication app(argc, argv);
 
+    SpinBoxWindow spinboxWindow;
     Producer producer;
     MainWindow mainWindow;
-    SpinBoxWindow spinboxWindow;
-//    producer.myQList_ptr = &myQList;
+
+    spinboxWindow.MainWindow_ptr = &mainWindow;
+
+    producer.myQList_ptr = &myQList;
 
 //    producer.fill();
 
-//    Consumer consumer;
-//    consumer.myQList_ptr = &myQList;
+    Consumer consumer;
+    consumer.myQList_ptr = &myQList;
     spinboxWindow.show();
 
     return app.exec();

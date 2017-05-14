@@ -17,7 +17,7 @@ SpinBoxWindow::~SpinBoxWindow()
 
 void SpinBoxWindow::on_buttonBox_accepted()
 {
-    mainWindow.show();
+    mainWindow_ptr->show();
 //    close();
 //    producer.fill(times);
 }
