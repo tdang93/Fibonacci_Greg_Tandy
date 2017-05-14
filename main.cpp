@@ -12,7 +12,8 @@ int main(int argc, char **argv)
 //    QList<int> myQList;
     QApplication app(argc, argv);
 
-//    Producer producer;
+    Producer producer;
+    MainWindow mainWindow;
     SpinBoxWindow spinboxWindow;
 //    producer.myQList_ptr = &myQList;
 

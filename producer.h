@@ -10,7 +10,7 @@ public:
     ~Producer();
 
     QList<int>* myQList_ptr = NULL;
-
+    Producer* producer_ptr = NULL;
     void fill(int times);
 
 

@@ -17,9 +17,11 @@ SpinBoxWindow::~SpinBoxWindow()
 
 void SpinBoxWindow::on_buttonBox_accepted()
 {
+    MainWindow mainWindow;
+    Producer producer;
     mainWindow.show();
-//    close();
-//    producer.fill(times);
+    close();
+    producer.fill(times);
 }
 
 void SpinBoxWindow::on_buttonBox_rejected()
