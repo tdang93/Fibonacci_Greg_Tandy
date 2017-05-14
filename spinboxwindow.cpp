@@ -20,6 +20,8 @@ void SpinBoxWindow::on_buttonBox_accepted()
     MainWindow mainWindow;
     mainWindow.show();
     close();
+    Producer producer;
+    producer.fill(times);
 }
 
 void SpinBoxWindow::on_buttonBox_rejected()
@@ -27,7 +29,7 @@ void SpinBoxWindow::on_buttonBox_rejected()
     close();
 }
 
-void SpinBoxWindow::on_spinBox_valueChanged(int times)
+void SpinBoxWindow::on_spinBox_valueChanged(int spinTimes)
 {
-    Producer.fill(times);
+    int times = spinTimes;
 }

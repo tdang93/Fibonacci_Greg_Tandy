@@ -14,13 +14,14 @@ class SpinBoxWindow : public QMainWindow
 public:
     explicit SpinBoxWindow(QWidget *parent = 0);
     ~SpinBoxWindow();
+    int times;
 
 private slots:
     void on_buttonBox_accepted();
 
     void on_buttonBox_rejected();
 
-    void on_spinBox_valueChanged(int times);
+    void on_spinBox_valueChanged(int spinTimes);
 
 private:
     Ui::SpinBoxWindow *ui;
