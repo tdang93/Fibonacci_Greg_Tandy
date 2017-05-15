@@ -9,14 +9,14 @@
 
 int main(int argc, char **argv)
 {
-//    QList<int> myQList;
+    QList<int> myQList;
     QApplication app(argc, argv);
 
     SpinBoxWindow spinboxWindow;
     Producer producer;
     MainWindow mainWindow;
 
-    spinboxWindow.MainWindow_ptr = &mainWindow;
+    spinboxWindow.mainWindow_ptr = &mainWindow;
 
     producer.myQList_ptr = &myQList;
 
@@ -25,6 +25,7 @@ int main(int argc, char **argv)
     Consumer consumer;
     consumer.myQList_ptr = &myQList;
     spinboxWindow.show();
+    consumer.pour();
 
     return app.exec();
 }

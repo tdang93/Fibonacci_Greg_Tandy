@@ -34,7 +34,6 @@ void Producer::fill(int times)
             *myQList_ptr << first << second;
             int outcome = first + second;
             *myQList_ptr << outcome;
-            while (!myQList_ptr->isEmpty())
             first = second;
             second = outcome;
         }

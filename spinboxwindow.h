@@ -2,6 +2,8 @@
 #define SPINBOXWINDOW_H
 
 #include <QMainWindow>
+#include "mainwindow.h"
+#include "producer.h"
 
 namespace Ui {
 class SpinBoxWindow;
@@ -15,6 +17,8 @@ public:
     explicit SpinBoxWindow(QWidget *parent = 0);
     ~SpinBoxWindow();
     int times;
+    MainWindow* mainWindow_ptr = NULL;
+    Producer producer;
 
 private slots:
     void on_buttonBox_accepted();
