@@ -19,7 +19,7 @@ void SpinBoxWindow::on_buttonBox_accepted()
 {
     mainWindow_ptr->show();
 //    close();
-//    producer.fill(times);
+    producer.fill(times);
 }
 
 void SpinBoxWindow::on_buttonBox_rejected()

@@ -9,6 +9,7 @@ public:
     Consumer();
     ~Consumer();
     QList<int>* myQList_ptr = NULL;
+    void pour();
 };
 
 #endif // CONSUMER_H
