@@ -21,8 +21,8 @@ void Producer::fill(int times)
 {
     QMutex_ptr->lock(); // lock the thread
 
-    int first = 0;
-    int second = 1;
+    unsigned long long first = 0;
+    unsigned long long second = 1;
 
     //number of outputs
     for (int i = 0; i < times; ++i)
@@ -43,7 +43,7 @@ void Producer::fill(int times)
         }
         else
         {
-            int outcome = first + second;
+            unsigned long long outcome = first + second;
             QList_ptr->push_back(outcome);
             first = second;
             second = outcome;

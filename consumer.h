@@ -12,7 +12,7 @@ public:
 
 //    void run();
     QMutex* QMutex_ptr = NULL;
-    QList<int>* QList_ptr = NULL;
+    QList<unsigned long long>* QList_ptr = NULL;
     int send;
 
     void pour();

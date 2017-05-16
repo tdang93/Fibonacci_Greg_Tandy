@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 {
     QMutex mutex;
 
-    QList<int> myQList;
+    QList<unsigned long long> myQList;
     QApplication app(argc, argv);
 
     SpinBoxWindow spinboxWindow;
