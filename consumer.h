@@ -2,7 +2,7 @@
 #define CONSUMER_H
 #include <QThread>
 
-class Consumer : QThread
+class Consumer : public QThread
 {
     Q_OBJECT
 public:

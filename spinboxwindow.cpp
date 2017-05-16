@@ -17,9 +17,8 @@ SpinBoxWindow::~SpinBoxWindow()
 
 void SpinBoxWindow::on_buttonBox_accepted()
 {
+    producer_ptr->fill(times);
     textEdit_ptr->show();
-//    close();
-    producer.fill(times);
 }
 
 void SpinBoxWindow::on_buttonBox_rejected()

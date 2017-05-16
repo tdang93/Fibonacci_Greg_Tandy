@@ -2,7 +2,7 @@
 #define PRODUCER_H
 #include <QThread>
 
-class Producer : QThread
+class Producer : public QThread
 {
     Q_OBJECT
 public:

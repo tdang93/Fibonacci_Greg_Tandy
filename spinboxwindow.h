@@ -18,7 +18,7 @@ public:
     ~SpinBoxWindow();
     int times;
     TextEdit* textEdit_ptr = NULL;
-    Producer producer;
+    Producer* producer_ptr = NULL;
 
 private slots:
     void on_buttonBox_accepted();
