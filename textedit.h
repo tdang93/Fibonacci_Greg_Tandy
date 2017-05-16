@@ -16,6 +16,7 @@ public:
     ~TextEdit();
     TextEdit* textEdit_ptr = NULL;
     void SetText();
+    int send;
 
 private:
     Ui::TextEdit *ui;

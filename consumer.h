@@ -10,6 +10,7 @@ public:
     ~Consumer();
     QList<int>* myQList_ptr = NULL;
     void pour();
+    int send;
 };
 
 #endif // CONSUMER_H

@@ -1,5 +1,6 @@
 #include "textedit.h"
 #include "ui_textedit.h"
+#include "consumer.h"
 #include <QTextEdit>
 
 TextEdit::TextEdit(QWidget *parent) :
@@ -16,5 +17,5 @@ TextEdit::~TextEdit()
 
 void TextEdit::SetText()
 {
-    QTextEdit::insertPlainText(send);
+    QTextEdit::insertPlainText(QString::number(send));
 }

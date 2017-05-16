@@ -26,7 +26,7 @@ int main(int argc, char **argv)
     consumer.myQList_ptr = &myQList;
     spinboxWindow.show();
     consumer.pour();
-    QObject::connect(&consumer, SIGNAL(send), &textEdit, SLOT(insertPlainText(int)));
+    QObject::connect(&consumer, SIGNAL(send), &textEdit, SLOT(SetText()));
 
     return app.exec();
 }
