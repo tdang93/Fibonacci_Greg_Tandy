@@ -12,7 +12,7 @@ Producer::~Producer()
 
 }
 
-void Producer::run(int times)
+void Producer::run()
 {
     fill(times);
 }
