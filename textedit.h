@@ -2,21 +2,24 @@
 #define TEXTEDIT_H
 
 #include <QWidget>
+#include <QTextEdit>
 
 namespace Ui {
 class TextEdit;
 }
 
-class TextEdit : public QWidget
+class TextEdit : public QTextEdit
 {
     Q_OBJECT
 
 public:
-    explicit TextEdit(QWidget *parent = 0);
+//    explicit TextEdit(QTextEdit *parent = 0);
     ~TextEdit();
     //TextEdit* textEdit_ptr = NULL;
     //void SetText();
     int send;
+
+    QTextEdit QTE;
 public slots:
     void SetText(int);
 
