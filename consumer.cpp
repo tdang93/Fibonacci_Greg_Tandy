@@ -15,7 +15,7 @@ void Consumer::pour()
     QString QS;
     while(!myQList_ptr->isEmpty())
     {
-        QS += myQList_ptr->takeFirst();
+        QS += QString::number(myQList_ptr->takeFirst());
         QS += " ";
     }
     emit sendSignal(QS);

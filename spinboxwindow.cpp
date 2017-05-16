@@ -17,6 +17,7 @@ SpinBoxWindow::~SpinBoxWindow()
 
 void SpinBoxWindow::on_buttonBox_accepted()
 {
+    textEdit_ptr->clear();
     producer_ptr->fill(times);
     textEdit_ptr->show();
 }
