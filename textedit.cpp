@@ -15,7 +15,9 @@ TextEdit::~TextEdit()
     delete ui;
 }
 
-void TextEdit::SetText()
+void TextEdit::SetText(int sent)
 {
-    QTextEdit::insertPlainText(QString::number(send));
+    //QTextEdit::insertPlainText(QString::number(sent));
+    QTextEdit QTE;
+    QTE.insertPlainText(QString::number(sent));
 }

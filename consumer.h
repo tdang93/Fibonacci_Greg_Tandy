@@ -11,6 +11,8 @@ public:
     QList<int>* myQList_ptr = NULL;
     void pour();
     int send;
+signals:
+    void sendSignal(int);
 };
 
 #endif // CONSUMER_H
