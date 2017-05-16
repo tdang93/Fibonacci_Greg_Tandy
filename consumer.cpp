@@ -12,11 +12,15 @@ Consumer::~Consumer()
 
 void Consumer::pour()
 {
+    QMutex_ptr->lock(); // lock the thread
+
     QString QS;
-    while(!myQList_ptr->isEmpty())
+    while(!QList_ptr->isEmpty())
     {
-        QS += QString::number(myQList_ptr->takeFirst());
+        QS += QString::number(QList_ptr->takeFirst());
         QS += " ";
     }
     emit sendSignal(QS);
+
+    QMutex_ptr->unlock(); // unlock the thread
 }

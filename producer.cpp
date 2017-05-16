@@ -12,8 +12,15 @@ Producer::~Producer()
 
 }
 
+Producer::run()
+{
+
+}
+
 void Producer::fill(int times)
 {
+    QMutex_ptr->lock(); // lock the thread
+
     int first = 0;
     int second = 1;
 
@@ -27,22 +34,24 @@ void Producer::fill(int times)
         if (i == 0)
         {
             //*myQList_ptr << first;
-            myQList_ptr->push_back(first); // Give this a try
+            QList_ptr->push_back(first); // Give this a try
         }
         else if (i == 1)
         {
             //*myQList_ptr << second;
-            myQList_ptr->push_back(second);
+            QList_ptr->push_back(second);
         }
         else
         {
             int outcome = first + second;
-            myQList_ptr->push_back(outcome);
+            QList_ptr->push_back(outcome);
             first = second;
             second = outcome;
         }   
     }
     emit sendSignal();
+
+    QMutex_ptr->unlock(); // unlock the thread
 }
 //    //number of outputs
 //    if (times == 1)

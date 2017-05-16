@@ -1,6 +1,8 @@
 #ifndef PRODUCER_H
 #define PRODUCER_H
+
 #include <QThread>
+#include <QMutex>
 
 class Producer : public QThread
 {
@@ -9,7 +11,9 @@ public:
     Producer();
     ~Producer();
 
-    QList<int>* myQList_ptr = NULL;
+    void run();
+    QMutex* QMutex_ptr = NULL;
+    QList<int>* QList_ptr = NULL;
     Producer* producer_ptr = NULL;
     void fill(int times);
 

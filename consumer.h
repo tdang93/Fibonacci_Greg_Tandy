@@ -1,6 +1,7 @@
 #ifndef CONSUMER_H
 #define CONSUMER_H
 #include <QThread>
+#include <QMutex>
 
 class Consumer : public QThread
 {
@@ -8,9 +9,12 @@ class Consumer : public QThread
 public:
     Consumer();
     ~Consumer();
-    QList<int>* myQList_ptr = NULL;
-//    void pour();
+
+    void run();
+    QMutex* QMutex_ptr = NULL;
+    QList<int>* QList_ptr = NULL;
     int send;
+
 signals:
     void sendSignal(QString);
 

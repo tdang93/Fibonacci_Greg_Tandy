@@ -6,9 +6,12 @@
 #include <QTextEdit>
 #include <QHBoxLayout>
 #include <QApplication>
+#include <QMutex>
 
 int main(int argc, char **argv)
 {
+    QMutex mutex;
+
     QList<int> myQList;
     QApplication app(argc, argv);
 
@@ -20,9 +23,11 @@ int main(int argc, char **argv)
     spinboxWindow.producer_ptr = &producer;
     spinboxWindow.textEdit_ptr = &textEdit;
 
-    producer.myQList_ptr = &myQList;
+    producer.QList_ptr = &myQList;
+    producer.QMutex_ptr = &mutex;
 
-    consumer.myQList_ptr = &myQList;
+    consumer.QList_ptr = &myQList;
+    consumer.QMutex_ptr = &mutex;
 
     spinboxWindow.show();
 
