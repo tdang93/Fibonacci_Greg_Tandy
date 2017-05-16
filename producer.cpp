@@ -12,7 +12,7 @@ Producer::~Producer()
 
 }
 
-Producer::run()
+void Producer::run()
 {
 
 }
@@ -27,10 +27,6 @@ void Producer::fill(int times)
     //number of outputs
     for (int i = 0; i < times; ++i)
     {
-        if(times < 1)
-        {
-            break;
-        }
         if (i == 0)
         {
             //*myQList_ptr << first;
@@ -49,9 +45,10 @@ void Producer::fill(int times)
             second = outcome;
         }   
     }
+    QMutex_ptr->unlock(); // unlock the thread
     emit sendSignal();
 
-    QMutex_ptr->unlock(); // unlock the thread
+
 }
 //    //number of outputs
 //    if (times == 1)
