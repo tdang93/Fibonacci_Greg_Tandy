@@ -12,9 +12,9 @@ Producer::~Producer()
 
 }
 
-void Producer::run()
+void Producer::run(int times)
 {
-
+    fill(times);
 }
 
 void Producer::fill(int times)
@@ -27,6 +27,10 @@ void Producer::fill(int times)
     //number of outputs
     for (int i = 0; i < times; ++i)
     {
+        if(times < 1) // keep this here for input validation. it prevents infinite looping which crashes the program!
+        {
+            break;
+        }
         if (i == 0)
         {
             //*myQList_ptr << first;
@@ -46,9 +50,8 @@ void Producer::fill(int times)
         }   
     }
     QMutex_ptr->unlock(); // unlock the thread
+
     emit sendSignal();
-
-
 }
 //    //number of outputs
 //    if (times == 1)

@@ -12,7 +12,7 @@ Consumer::~Consumer()
 
 void Consumer::run()
 {
-
+    pour();
 }
 
 void Consumer::pour()
@@ -26,5 +26,6 @@ void Consumer::pour()
         QS += " ";
     }
     QMutex_ptr->unlock(); // unlock the thread
+
     emit sendSignal(QS);
 }

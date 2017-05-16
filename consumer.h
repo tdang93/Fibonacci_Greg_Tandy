@@ -10,16 +10,18 @@ public:
     Consumer();
     ~Consumer();
 
-    void run();
+//    void run();
     QMutex* QMutex_ptr = NULL;
     QList<int>* QList_ptr = NULL;
     int send;
 
+    void pour();
 signals:
     void sendSignal(QString);
 
 public slots:
-    void pour();
+//    void pour();
+    void run();
 };
 
 #endif // CONSUMER_H

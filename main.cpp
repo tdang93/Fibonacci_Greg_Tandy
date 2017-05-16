@@ -30,15 +30,13 @@ int main(int argc, char **argv)
     consumer.QMutex_ptr = &mutex;
 
     spinboxWindow.show();
-    producer.run();
-    consumer.run();
 
-    QObject::connect(&producer, SIGNAL(sendSignal()), &consumer, SLOT(pour()));
+//    QObject::connect(&producer, SIGNAL(sendSignal()), &consumer, SLOT(pour()));
+    QObject::connect(&producer, SIGNAL(sendSignal()), &consumer, SLOT(run()));
     QObject::connect(&consumer, SIGNAL(sendSignal(QString)), &textEdit, SLOT(SetText(QString)));
 
-
- //   consumer.pour();
-
+//    producer.run();
+//    consumer.run();
 
     return app.exec();
 }
