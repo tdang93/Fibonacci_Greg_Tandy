@@ -26,8 +26,8 @@ int main(int argc, char **argv)
 
     spinboxWindow.show();
 
-    QObject::connect(&producer, SIGNAL(sendSignal(int)), &textEdit, SLOT(SetText(int)));
-    QObject::connect(&consumer, SIGNAL(sendSignal(int)), &textEdit, SLOT(SetText(int)));
+    QObject::connect(&producer, SIGNAL(sendSignal()), &consumer, SLOT(pour()));
+    QObject::connect(&consumer, SIGNAL(sendSignal(QString)), &textEdit, SLOT(SetText(QString)));
 
 
  //   consumer.pour();

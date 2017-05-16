@@ -12,9 +12,11 @@ Consumer::~Consumer()
 
 void Consumer::pour()
 {
+    QString QS;
     while(!myQList_ptr->isEmpty())
     {
-        int send = myQList_ptr->takeFirst();
-        emit sendSignal(send);
+        QS += myQList_ptr->takeFirst();
+        QS += " ";
     }
+    emit sendSignal(QS);
 }

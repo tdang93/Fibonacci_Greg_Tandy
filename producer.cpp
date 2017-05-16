@@ -42,7 +42,7 @@ void Producer::fill(int times)
             second = outcome;
         }   
     }
-    emit sendSignal(2);
+    emit sendSignal();
 }
 //    //number of outputs
 //    if (times == 1)

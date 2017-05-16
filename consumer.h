@@ -9,10 +9,13 @@ public:
     Consumer();
     ~Consumer();
     QList<int>* myQList_ptr = NULL;
-    void pour();
+//    void pour();
     int send;
 signals:
-    void sendSignal(int);
+    void sendSignal(QString);
+
+public slots:
+    void pour();
 };
 
 #endif // CONSUMER_H

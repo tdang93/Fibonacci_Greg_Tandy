@@ -13,10 +13,10 @@ TextEdit::~TextEdit()
     delete ui;
 }
 
-void TextEdit::SetText(int sent)
+void TextEdit::SetText(QString QS)
 {
     //QTE.insertPlainText(QString::number(sent));
     //QTE.show();
 
-    insertPlainText(QString::number(sent));
+    insertPlainText(QS);
 }

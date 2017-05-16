@@ -21,7 +21,7 @@ public:
 
     QTextEdit QTE;
 public slots:
-    void SetText(int);
+    void SetText(QString);
 
 private:
     Ui::TextEdit *ui;

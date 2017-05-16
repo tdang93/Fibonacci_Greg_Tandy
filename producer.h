@@ -14,7 +14,7 @@ public:
     void fill(int times);
 
 signals:
-    void sendSignal(int);
+    void sendSignal();
 };
 
 #endif // PRODUCER_H
