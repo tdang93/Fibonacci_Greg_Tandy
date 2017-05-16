@@ -17,10 +17,13 @@ void Producer::fill(int times)
     int first = 0;
     int second = 1;
 
-
     //number of outputs
     for (int i = 0; i < times; ++i)
     {
+        if(times < 1)
+        {
+            break;
+        }
         if (i == 0)
         {
             //*myQList_ptr << first;
@@ -37,7 +40,10 @@ void Producer::fill(int times)
             myQList_ptr->push_back(outcome);
             first = second;
             second = outcome;
-        }
+        }   
+    }
+    emit sendSignal(2);
+}
 //    //number of outputs
 //    if (times == 1)
 //    {
@@ -59,5 +65,3 @@ void Producer::fill(int times)
 //            first = second;
 //            second = outcome;
 //        }
-    }
-}

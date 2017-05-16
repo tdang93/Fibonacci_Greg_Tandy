@@ -16,7 +16,7 @@ class SpinBoxWindow : public QMainWindow
 public:
     explicit SpinBoxWindow(QWidget *parent = 0);
     ~SpinBoxWindow();
-    int times;
+    int times = 1;
     TextEdit* textEdit_ptr = NULL;
     Producer* producer_ptr = NULL;
 

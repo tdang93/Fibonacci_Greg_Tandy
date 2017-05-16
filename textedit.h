@@ -14,11 +14,12 @@ class TextEdit : public QWidget
 public:
     explicit TextEdit(QWidget *parent = 0);
     ~TextEdit();
-    TextEdit* textEdit_ptr = NULL;
+    //TextEdit* textEdit_ptr = NULL;
     //void SetText();
     int send;
 public slots:
     void SetText(int);
+
 private:
     Ui::TextEdit *ui;
 };

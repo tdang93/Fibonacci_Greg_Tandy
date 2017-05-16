@@ -1,11 +1,9 @@
 #include "textedit.h"
 #include "ui_textedit.h"
 #include "consumer.h"
-#include <QTextEdit>
+//#include <QTextEdit>
 
-TextEdit::TextEdit(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::TextEdit)
+TextEdit::TextEdit(QWidget *parent) : QWidget(parent), ui(new Ui::TextEdit)
 {
     ui->setupUi(this);
 }
@@ -17,7 +15,5 @@ TextEdit::~TextEdit()
 
 void TextEdit::SetText(int sent)
 {
-    //QTextEdit::insertPlainText(QString::number(sent));
-    QTextEdit QTE;
-    QTE.insertPlainText(QString::number(sent));
+
 }

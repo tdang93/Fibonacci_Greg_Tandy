@@ -13,7 +13,8 @@ public:
     Producer* producer_ptr = NULL;
     void fill(int times);
 
-
+signals:
+    void sendSignal(int);
 };
 
 #endif // PRODUCER_H

@@ -22,6 +22,12 @@
      <height>241</height>
     </rect>
    </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="overwriteMode">
+    <bool>false</bool>
+   </property>
   </widget>
  </widget>
  <resources/>
