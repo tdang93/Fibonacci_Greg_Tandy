@@ -1,7 +1,7 @@
 #include "Consumer.h"
 #include "Producer.h"
 #include "spinboxwindow.h"
-#include "mainwindow.h"
+#include "textedit.h"
 
 #include <QTextEdit>
 #include <QHBoxLayout>
@@ -14,9 +14,9 @@ int main(int argc, char **argv)
 
     SpinBoxWindow spinboxWindow;
     Producer producer;
-    MainWindow mainWindow;
+    TextEdit textEdit;
 
-    spinboxWindow.mainWindow_ptr = &mainWindow;
+    spinboxWindow.textEdit_ptr = &textEdit;
 
     producer.myQList_ptr = &myQList;
 
@@ -26,6 +26,7 @@ int main(int argc, char **argv)
     consumer.myQList_ptr = &myQList;
     spinboxWindow.show();
     consumer.pour();
+    QObject::connect(&consumer, SIGNAL(send), &textEdit, SLOT(insertPlainText(int)));
 
     return app.exec();
 }

@@ -10,14 +10,14 @@ SOURCES += \
     Consumer.cpp \
     Producer.cpp \
     spinboxwindow.cpp \
-    mainwindow.cpp
+    textedit.cpp
 
 HEADERS += \
     Consumer.h \
     Producer.h \
     spinboxwindow.h \
-    mainwindow.h
+    textedit.h
 
 FORMS += \
     spinboxwindow.ui \
-    mainwindow.ui
+    textedit.ui

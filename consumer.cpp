@@ -14,6 +14,7 @@ void Consumer::pour()
 {
     while(!myQList_ptr->isEmpty())
     {
-        myQList_ptr->takeFirst();
+        int send = myQList_ptr->takeFirst();
+        emit send;
     }
 }

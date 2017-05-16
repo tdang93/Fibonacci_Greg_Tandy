@@ -2,7 +2,7 @@
 #define SPINBOXWINDOW_H
 
 #include <QMainWindow>
-#include "mainwindow.h"
+#include "textedit.h"
 #include "producer.h"
 
 namespace Ui {
@@ -17,7 +17,7 @@ public:
     explicit SpinBoxWindow(QWidget *parent = 0);
     ~SpinBoxWindow();
     int times;
-    MainWindow* mainWindow_ptr = NULL;
+    TextEdit* textEdit_ptr = NULL;
     Producer producer;
 
 private slots:

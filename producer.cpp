@@ -21,21 +21,43 @@ void Producer::fill(int times)
     //number of outputs
     for (int i = 0; i < times; ++i)
     {
-        if (times == 1)
+        if (i == 0)
         {
-            *myQList_ptr << first;
+            //*myQList_ptr << first;
+            myQList_ptr->push_back(first); // Give this a try
         }
-        else if (times == 2)
+        else if (i == 1)
         {
-            *myQList_ptr << first << second;
+            //*myQList_ptr << second;
+            myQList_ptr->push_back(second);
         }
         else
         {
-            *myQList_ptr << first << second;
             int outcome = first + second;
-            *myQList_ptr << outcome;
+            myQList_ptr->push_back(outcome);
             first = second;
             second = outcome;
         }
+//    //number of outputs
+//    if (times == 1)
+//    {
+//        //*myQList_ptr << first;
+//        myQList_ptr->push_back(first); // Give this a try
+//    }
+//    else if (times == 2)
+//    {
+//        //*myQList_ptr << first << second;
+//        myQList_ptr->push_back(second);
+//    }
+//    else
+//    {
+//        *myQList_ptr << first << second;
+//        for (int i = 0; i < times - 1; ++i)
+//        {
+//            int outcome = first + second;
+//            myQList_ptr->push_back(outcome);
+//            first = second;
+//            second = outcome;
+//        }
     }
 }

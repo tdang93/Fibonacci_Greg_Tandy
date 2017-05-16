@@ -1,6 +1,6 @@
 #include "spinboxwindow.h"
 #include "ui_spinboxwindow.h"
-#include "mainwindow.h"
+#include "textedit.h"
 #include "producer.h"
 
 SpinBoxWindow::SpinBoxWindow(QWidget *parent) :
@@ -17,7 +17,7 @@ SpinBoxWindow::~SpinBoxWindow()
 
 void SpinBoxWindow::on_buttonBox_accepted()
 {
-    mainWindow_ptr->show();
+    textEdit_ptr->show();
 //    close();
     producer.fill(times);
 }
